@@ -8,7 +8,8 @@ Yet Another Multivariate Median
 Another method for computing the projection median for any dimensional dataset. Basically, it minimises the objective function \code{\link{yamm.obj}} over a unit hypersphere and finds the optimal shift vector \code{mu} in \code{yamm.obj}. \code{\link{optim}} in the \pkg{stats} package is used in this function to minimise \code{yamm.obj}.  
 }
 \usage{
-yamm(x, nprojs = 2000, reltol = 1e-6, abstol=-Inf, xstart = l1median(x),
+yamm(x, nprojs = 2000, reltol = 1e-6, abstol=-Inf,
+     xstart = L1median(x)$estimate,
      opt.method = "BFGS", doabs = 0, full.results=FALSE)
 }
 %- maybe also 'usage' for other objects documented here.
@@ -26,7 +27,7 @@ The tolerance of the optimisation process gets supplied to control arguments of 
 The absolute convergence tolerance of the optimisation process gets supplied to control arguments of \code{optim}. The default value is negative infinity.
 }
   \item{xstart}{
-The starting value for the optimiser. The default value is Spatial median of the data using function \code{l1median}. Other multivariate medians or mean values can also be used. Note, you should be aware of the outliers when using the mean values as a starting point, which may slow down the optimisation process or result in a less accurate median.
+The starting value for the optimiser. The default value is Spatial median of the data using function \code{L1median}. Other multivariate medians or mean values can also be used. Note, you should be aware of the outliers when using the mean values as a starting point, which may slow down the optimisation process or result in a less accurate median.
 }
   \item{opt.method}{
 The method chosen for the optimiser when computing the \code{yamm}, with default function \dQuote{\code{BFGS}}. Apart from \dQuote{\code{BFGS}}, other functions in \code{optim} like \dQuote{\code{Nelder-Mead}}, \dQuote{\code{CG}}, \dQuote{\code{L-BFGS-B}}, and \dQuote{\code{SANN}} can also be used.
@@ -96,7 +97,7 @@ yamm(beetle,nprojs = 1000,reltol=1e-3,doabs=0,full.results=TRUE)
 \references{
 Chen, F. and Nason, Guy P. (2020) A new method for computing the projection medi
 an, its influence curve and techniques for the production of projected quantile
-plots. \emph{PLOS One}, (to appear)
+plots. \emph{PLOS One}, \doi{10.1371/journal.pone.0229845}
 }
 
 \keyword{ yamm }

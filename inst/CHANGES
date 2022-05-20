@@ -1,0 +1,6 @@
+1.3.2:	Removed references to Oja's median and also added proper references
+	to original PLOS One paper that described Yamm
+
+	Replaced the l1median function from pcaPP by the L1median function 
+	from the robustX package (this is because pcaPP failed CRAN package
+	checks and was archived)

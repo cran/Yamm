@@ -25,7 +25,7 @@ and has been deleted here.
 \source{Lubischew, A.A.(1962) On the Use of Discriminant Functions in Taxonomy, \emph{Biometrics},\bold{18}, 455-477.
 }
 \references{
-Cook, D.H. and Swayne, D.F. (2007). Interactive and Dynamic Graphics for Data Analysis: With Examples Using R and GGobi. \url{http://www.ggobi.org/book/data/flea.xml}
+Cook, D.H. and Swayne, D.F. (2007). Interactive and Dynamic Graphics for Data Analysis: With Examples Using R and GGobi. \url{http://ggobi.org/book/data/flea.xml}
 }
 \examples{
 data(beetle)

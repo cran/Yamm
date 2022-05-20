@@ -5,7 +5,8 @@
 Plot Two-dimensional Medians
 }
 \description{
-This function plots various multivariate medians in the two-dimensional case. The grey dots presented in the figure are the data points and the Spatial, Component-wise (CWmed), Tukey's, Oja's, Liu's, Projection median as well as the mean value of the data set are plotted in the figure.
+This function plots various multivariate medians in the two-dimensional case. The grey dots presented in the figure are the data points and the Spatial, Component-wise (CWmed), Tukey's,  Liu's, Projection median as well as the mean value of the data set are plotted in the figure. Oja's median is no longer used,
+as the package used to produce this function has been archived
 }
 \usage{
 Plot2dMedian(data, xvec, yvec, yamm.nprojs = 2000,
@@ -46,7 +47,9 @@ Title for y-axis. Must be a character string.
 }
 }
 \details{
-The Spatial median is obtained using \code{\link{l1median}} in the Rpackage \pkg{pacPP}. The Component-wise (CWmed), Liu's and Tukey's median are produced using function \code{\link{med}} in the Rpackage \pkg{depth}. Oja's median is produced using function \code{\link{ojaMedian}} in the Rpackage \code{OjaNP}. When computing the projection median, three approximations are implemented and diplayed in the plot, where \code{\link{PmedMCInt}} uses Monte Carlo method, \code{\link{PmedTrapz}} is computed by the trapezoidal rule, and \code{\link{yamm}} uses an optimiser.
+The Spatial median is obtained using \code{\link{L1median}} in the Rpackage \pkg{robustX}. The Component-wise (CWmed), Liu's and Tukey's median are produced using function \code{\link{med}} in the Rpackage \pkg{depth}. Oja's median is NO LONGER produced using function \code{ojaMedian} in the Rpackage \code{OjaNP},
+as this package has been archived.
+When computing the projection median, three approximations are implemented and diplayed in the plot, where \code{\link{PmedMCInt}} uses Monte Carlo method, \code{\link{PmedTrapz}} is computed by the trapezoidal rule, and \code{\link{yamm}} uses an optimiser.
 
 The argument \code{xvec} and \code{yvec} are useful when there are outliers in the data set, which are not expected to be shown in the figure in some cases. Determining the x-axis and y-axis allows you to zoom in the plot and see the difference between multivariate medians and mean value.
 }
@@ -63,7 +66,7 @@ The argument \code{xvec} and \code{yvec} are useful when there are outliers in t
 \references{
 Chen, F. and Nason, Guy P. (2020) A new method for computing the projection medi
 an, its influence curve and techniques for the production of projected quantile
-plots. \emph{PLOS One}, (to appear)
+plots. \emph{PLOS One}, \doi{10.1371/journal.pone.0229845}
 }
 \examples{
 # Load a data frame with 103 rows and 2 columns.

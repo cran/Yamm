@@ -6,7 +6,7 @@
 \packageTitle{Yamm}
 }
 \description{
-This package provides functions for computing the projection median. \code{PmedTrapz} approximates the projection median by the trapezoidal rule, which is only valid for the two- and three-dimensional cases, while \code{PmedMCInt} use Monte Carlo approximation, and it is valid for any multivariate median. \code{yamm} provides another method to compute the projection median based on an optimiser technique. This package also provides functions for plotting different multivariate medians, such as the Spatial, Component-wise, Tukey's, Oja's median, etc., for randomly generated data sets in both the two-dimensional and three-dimensional cases. In addition, this package also allows users to produce the two-dimensional and three-dimensional quantile plots with function \code{muqie} and \code{muqie3D} respectively.
+This package provides functions for computing the projection median. \code{PmedTrapz} approximates the projection median by the trapezoidal rule, which is only valid for the two- and three-dimensional cases, while \code{PmedMCInt} use Monte Carlo approximation, and it is valid for any multivariate median. \code{yamm} provides another method to compute the projection median based on an optimiser technique. This package also provides functions for plotting different multivariate medians, such as the Spatial, Component-wise, Tukey's, etc., for randomly generated data sets in both the two-dimensional and three-dimensional cases. In addition, this package also allows users to produce the two-dimensional and three-dimensional quantile plots with function \code{muqie} and \code{muqie3D} respectively.
 }
 
 \details{
@@ -23,13 +23,13 @@ Maintainer: \packageMaintainer{Yamm}
 \references{
 Basu, R., Bhattacharya, B.B., and Talukdar, T. (2012) The projection median of a set of points in Rd \emph{CCCG.}, \bold{47}, 329-346. \doi{10.1007/s00454-011-9380-6}
 
-Chen, F. and Nason, Guy P. (2020) A new method for computing the projection median, its influence curve and techniques for the production of projected quantile plots. \emph{PLOS One}, (to appear)
+Chen, F. and Nason, Guy P. (2020) A new method for computing the projection medi
+an, its influence curve and techniques for the production of projected quantile
+plots. \emph{PLOS One}, \doi{10.1371/journal.pone.0229845}
 
 Croux, C., Filzmoser, P., and Oliveira, M., (2007). Algorithms for Projection-Pursuit Robust Principal Component Analysis,  \emph{Chemometrics and Intelligent Laboratory Systems}, \bold{87}, 218-225.
 
 Durocher, S. and Kirkpatrick, D. (2009), The projection median of a set of points, \emph{Computational Geometry}, \bold{42}, 364-375.
-
-Fischer,D., Mosler, K., Mottonen, J.K., Nordhausen, K., Pokotylo, O., and Vogel, D. (2016) Computing the Oja Median in R: The Package OjaNP, \emph{ArXiv:1606.07620}
 
 Rousseeuw, P.J. and Ruts, I. (1996), Algorithm AS 307: Bivariate location depth, \emph{Appl. Stat.-J. Roy. St. C}, \bold{45}, 516-526.
 

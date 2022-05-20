@@ -6,8 +6,8 @@ function(data,xvec,yvec,zvec,yamm.nprojs=2000,PmedMCInt.nprojs=20000,no.subinter
   if (length(no.subinterval)!=2)
     stop("The number of subintervals should be a vector of length 2.")
   
-  med.Oja <- ojaMedian(data)
-  med.Spatial <- l1median(data)
+ # med.Oja <- ojaMedian(data)
+  med.Spatial <- L1median(data)$estimate
   med.CWmed <- med(data, "CWmed")$median
   med.Tukey <- med(data, "Tukey",approx = TRUE)$median
   mean <- apply(data,2,mean)
@@ -23,7 +23,7 @@ function(data,xvec,yvec,zvec,yamm.nprojs=2000,PmedMCInt.nprojs=20000,no.subinter
   on.exit(par(oldpar))
   
   plot(data[,1], data[,2], pch=20,col="grey",xlab=xlab, ylab=ylab, xlim=c(min(xvec),max(xvec)), ylim=c(min(yvec),max(yvec)))
-  points(med.Oja[1], med.Oja[2], col="hot pink", pch=1,cex=1.5,lwd=2)
+  #points(med.Oja[1], med.Oja[2], col="hot pink", pch=1,cex=1.5,lwd=2)
   points(med.Spatial[1], med.Spatial[2], col="lime green", pch=2,cex=1.5,lwd=2)
   points(med.CWmed[1], med.CWmed[2], col="blue", pch=3,cex=1.5,lwd=2)
   points(med.Tukey[1], med.Tukey[2], col="purple", pch=4,cex=1.5,lwd=2)
@@ -33,7 +33,7 @@ function(data,xvec,yvec,zvec,yamm.nprojs=2000,PmedMCInt.nprojs=20000,no.subinter
   points(med.Yamm[1], med.Yamm[2], col="black", pch=8, bg=5,cex=1.5)
   
   plot(data[,3], data[,2], pch=20,col="grey",xlab=zlab, ylab=ylab, xlim=c(min(zvec),max(zvec)), ylim=c(min(yvec),max(yvec)))
-  points(med.Oja[3], med.Oja[2], col="hot pink", pch=1,cex=1.5,lwd=2)
+  #points(med.Oja[3], med.Oja[2], col="hot pink", pch=1,cex=1.5,lwd=2)
   points(med.Spatial[3], med.Spatial[2], col="lime green", pch=2,cex=1.5,lwd=2)
   points(med.CWmed[3], med.CWmed[2], col="blue", pch=3,cex=1.5,lwd=2)
   points(med.Tukey[3], med.Tukey[2], col="purple", pch=4,cex=1.5,lwd=2)
@@ -43,7 +43,7 @@ function(data,xvec,yvec,zvec,yamm.nprojs=2000,PmedMCInt.nprojs=20000,no.subinter
   points(med.Yamm[3], med.Yamm[2], col="black", pch=8, bg=5,cex=1.5)
   
   plot(data[,1], data[,3], pch=20,col="grey",xlab=xlab, ylab=zlab, xlim=c(min(xvec),max(xvec)), ylim=c(min(zvec),max(zvec)))
-  points(med.Oja[1], med.Oja[3], col="hot pink", pch=1,cex=1.5,lwd=2)
+  #points(med.Oja[1], med.Oja[3], col="hot pink", pch=1,cex=1.5,lwd=2)
   points(med.Spatial[1], med.Spatial[3], col="lime green", pch=2,cex=1.5,lwd=2)
   points(med.CWmed[1], med.CWmed[3], col="blue", pch=3,cex=1.5,lwd=2)
   points(med.Tukey[1], med.Tukey[3], col="purple", pch=4,cex=1.5,lwd=2)

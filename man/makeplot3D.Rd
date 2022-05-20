@@ -67,10 +67,10 @@ diff.col=3, interval=0.1,width=500, height=500, movie.name=f)
 cat("Movie saved to: ", f, "\n")
 }
 }
+
 \references{
 Chen, F. and Nason, Guy P. (2020) A new method for computing the projection medi
 an, its influence curve and techniques for the production of projected quantile
-plots. \emph{PLOS One}, (to appear)
+plots. \emph{PLOS One}, \doi{10.1371/journal.pone.0229845}
 }
-
 \keyword{ yamm }

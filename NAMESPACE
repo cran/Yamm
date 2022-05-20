@@ -1,6 +1,6 @@
 exportPattern("^[[:alpha:]]+")
 useDynLib(Yamm, .registration = TRUE)
-import(depth, OjaNP, pcaPP, interp)
+import(depth, robustX, interp)
 importFrom("graphics", "layout", "legend", "par", "plot", "plot.new", "points")
 importFrom("stats", "optim")
 importFrom("graphics", "persp", "polygon", "segments", "text", "title")

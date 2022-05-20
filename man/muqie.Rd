@@ -67,10 +67,11 @@ data(beetle)
 # Compute the 0.7-quantile for the first two columns of the beetle data. 
 muqie(beetle,dm=c(1,4), probs=0.7)
 }
+
 \references{
 Chen, F. and Nason, Guy P. (2020) A new method for computing the projection medi
 an, its influence curve and techniques for the production of projected quantile
-plots. \emph{PLOS One}, (to appear)
+plots. \emph{PLOS One}, \doi{10.1371/journal.pone.0229845}
 }
 
 \keyword{yamm}

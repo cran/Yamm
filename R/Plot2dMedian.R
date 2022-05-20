@@ -14,10 +14,10 @@ function(data,xvec,yvec,yamm.nprojs=2000,PmedMCInt.nprojs=20000,no.subinterval=3
   med.Liu <- med(data, "Liu")$median
   points(med.Liu[1], med.Liu[2], col="red", pch=0,cex=1.5,lwd=2)
   
-  med.Oja <- ojaMedian(data)
-  points(med.Oja[1], med.Oja[2], col="hot pink", pch=1,cex=1.5,lwd=2)
+  #med.Oja <- ojaMedian(data)
+  #points(med.Oja[1], med.Oja[2], col="hot pink", pch=1,cex=1.5,lwd=2)
   
-  med.Spatial <- l1median(data)
+  med.Spatial <- L1median(data)$estimate
   points(med.Spatial[1], med.Spatial[2], col="lime green", pch=2,cex=1.5,lwd=2)
   
   med.CWmed <- med(data, "CWmed")$median

@@ -28,7 +28,7 @@ A vector of the projection median in the two or three dimensions.
 \references{
 Chen, F. and Nason, Guy P. (2020) A new method for computing the projection medi
 an, its influence curve and techniques for the production of projected quantile
-plots. \emph{PLOS One}, (to appear)
+plots. \emph{PLOS One}, \doi{10.1371/journal.pone.0229845}
 
 Durocher, S. and Kirkpatrick, D. (2009), The projection median of a set of points, \emph{Computational Geometry},\bold{42}, 364-375.
 

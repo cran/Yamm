@@ -1,4 +1,4 @@
-yamm <- function (x, nprojs = 2000, reltol = 1e-06, abstol=-Inf,  xstart = l1median(x), 
+yamm <- function (x, nprojs = 2000, reltol = 1e-06, abstol=-Inf,  xstart = L1median(x)$estimate, 
                   opt.method = "BFGS", doabs = 0, full.results = FALSE) 
 {
   #	cat("Reltol = ", reltol, ". Abstol = ", abstol, "\n")
